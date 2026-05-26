@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chaos Lab — an atlas of deterministic disorder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div class="brand-text">
+        <h1>Chaos<span class="ital">Lab</span></h1>
+        <span class="tag">an atlas of deterministic disorder</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="counter" id="pointCounter">—</div>
+      <div class="status" id="status"><span class="dot"></span><span id="statusText">DEVELOPING</span></div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: system index -->
+    <aside class="rail rail-left">
+      <div class="rail-head">Systems <span class="rail-count" id="sysCount"></span></div>
+      <nav id="systemList" class="system-list"></nav>
+      <div class="rail-foot">
+        <span>arrow keys ↑↓ to cycle</span>
+      </div>
+    </aside>
+
+    <!-- CENTER: viewport -->
+    <section class="stage">
+      <div class="viewport" id="viewport">
+        <canvas id="canvas"></canvas>
+        <span class="tick tick-tl"></span>
+        <span class="tick tick-tr"></span>
+        <span class="tick tick-bl"></span>
+        <span class="tick tick-br"></span>
+        <div class="readout" id="readout"></div>
+        <div class="hint" id="hint"></div>
+      </div>
+    </section>
+
+    <!-- RIGHT: placard + controls -->
+    <aside class="rail rail-right">
+      <div class="placard">
+        <div class="placard-fam" id="sysFamily">—</div>
+        <h2 class="placard-name" id="sysName">—</h2>
+        <div class="placard-sub" id="sysSub"></div>
+        <pre class="equation" id="sysEquation"></pre>
+        <p class="blurb" id="sysBlurb"></p>
+      </div>
+
+      <div class="section">
+        <div class="rail-head">
+          Parameters
+          <button class="mini" id="btnRandom" title="Randomize parameters">randomize</button>
+        </div>
+        <div id="paramPanel" class="param-panel"></div>
+      </div>
+
+      <div class="section">
+        <div class="rail-head">Palette</div>
+        <div id="paletteList" class="palette-list"></div>
+      </div>
+
+      <div class="controls">
+        <button id="btnPlay" class="ctl">PAUSE</button>
+        <button id="btnReset" class="ctl">RESET</button>
+        <button id="btnExport" class="ctl ctl-accent">EXPORT PNG</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/palettes.js"></script>
+  <script src="js/systems.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
