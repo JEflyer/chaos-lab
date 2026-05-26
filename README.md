@@ -11,6 +11,8 @@ export. The maths is deterministic; the beauty is emergent.
 
 ---
 
+**▶ Live demo:** https://jeflyer.github.io/chaos-lab/
+
 ## Running it
 
 No build step, no server, no dependencies. Just open the file:
@@ -117,3 +119,9 @@ only an `init` and a `map`:
 A 3D system supplies `init`, `deriv`, a `dt` param and `...VIEW3D`. The other
 kinds (`escape`, `grid`, `ca`, `physics`, `plot`) have their renderers in
 `engine.js`.
+
+---
+
+## License
+
+[MIT](LICENSE) — free to use, modify, and distribute.
