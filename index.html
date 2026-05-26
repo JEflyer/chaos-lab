@@ -40,6 +40,7 @@
     <section class="stage">
       <div class="viewport" id="viewport">
         <canvas id="canvas"></canvas>
+        <canvas id="gl"></canvas>
         <span class="tick tick-tl"></span>
         <span class="tick tick-tr"></span>
         <span class="tick tick-bl"></span>
@@ -57,6 +58,11 @@
         <div class="placard-sub" id="sysSub"></div>
         <pre class="equation" id="sysEquation"></pre>
         <p class="blurb" id="sysBlurb"></p>
+      </div>
+
+      <div class="view-toggle" id="viewToggle">
+        <button class="vt-btn" data-mode="2d">2D&nbsp;Field</button>
+        <button class="vt-btn" data-mode="3d">3D&nbsp;Orbit</button>
       </div>
 
       <div class="section">
@@ -82,7 +88,9 @@
 
   <script src="js/palettes.js"></script>
   <script src="js/systems.js"></script>
+  <script src="js/three.min.js"></script>
   <script src="js/engine.js"></script>
+  <script src="js/orbit3d.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
